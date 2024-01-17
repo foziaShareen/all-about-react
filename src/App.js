@@ -2,17 +2,19 @@ import './App.css'
 import Header from './components/Header/Header'
 
 const App=()=>{
-  let appName = "App"
-  let heading = "company name"
-  
+  // let appName = "App"
+   let heading = "company name"
+  function handleClick(eve){
+    console.log(eve.target)
+  }
   return(
     <>
-<div className={appName}>
-  <h1 style={{color:'red'}}>hello world</h1>
- 
+<div onClick={handleClick}>
+<Header name={heading} />
 
-</div>
-<Header name={heading} title="some hard coded"/>
+</div >
+
+
 <div>welcome to our site</div>
     </>
   )
