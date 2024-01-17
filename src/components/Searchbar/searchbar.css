@@ -1,0 +1,8 @@
+.searchbar{
+    background-color: rgb(157, 187, 247);
+    display: flex;
+    flex-direction: row;
+    align-items: cneter;
+    justify-content: center;
+    padding:1rem;
+}

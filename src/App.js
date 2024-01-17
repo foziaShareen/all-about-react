@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/Header/Header'
+import Searchbar from './components/Searchbar/Searchbar'
 
 const App=()=>{
   // let appName = "App"
@@ -11,6 +12,7 @@ const App=()=>{
     <>
 <div onClick={handleClick}>
 <Header name={heading} />
+<Searchbar/>
 
 </div >
 
