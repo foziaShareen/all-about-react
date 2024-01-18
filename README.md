@@ -1,4 +1,5 @@
-what if we want to use this update value from setState function in our application on the page where we have the state
-const[term,setTerm]=useState("")
-note here we have empty string and in javascript empty string are falsy value , so for capture the value from term variable we have to check wether it is empty or some value is written in search box
-{term}?<p>you search for {term}:""
+usestate is not passed to children so we have to create the state in place where we have to use it
+we will create it in parent component, and because we cannot use our setTerms in our child copmnent so we 
+define a function in parent component in which we place our setTerms
+NOTE  : PURPOSE of this code is to show the history of
+our search box 

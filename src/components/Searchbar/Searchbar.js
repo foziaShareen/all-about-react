@@ -1,7 +1,7 @@
 import './searchbar.css'
 import {useState}from 'react'
-export default function Searchbar(){
-    const[term,setTerm]=useState("")
+export default function Searchbar(props){
+    // const[term,setTerm]=useState("")
     function clicked(eve){
         console.log("clicked")
     }
@@ -12,10 +12,9 @@ export default function Searchbar(){
         console.log('changed',eve.target.value)
     }
     function submitted(eve){
-    
-        setTerm(eve.target['keyword'].value)
-        eve.preventDefault()
-        console.log("submitted")
+     eve.preventDefault()
+    console.log("submitted")
+    props.addTerm(eve.target['keyword'].value)
     }
     return(
         <section className="searchbar">
@@ -23,7 +22,8 @@ export default function Searchbar(){
             <input name="keyword"type="text" placeholder="key" className="searchinput" onChange={changed}/>,
         <button type="submit"name="btn" className="searchbtn" onClick={clicked}>Search</button>
             </form>
-       {term?<p> you search for {term}</p>:''}
+       {props.term?<p> you search for {props.term}</p>:''}
+       
         </section>
     )
 }
